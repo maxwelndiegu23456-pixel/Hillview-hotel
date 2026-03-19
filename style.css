@@ -236,3 +236,123 @@ button:hover{
     color: #006400; /* Deep green for "Success/Wealth"*/
     font-size: 1.3rem; /*Slightly larger than the others*/
 }
+@media (max-width: 768px){
+    .room-table{
+        display: block;
+        overflow-x: auto; /*Adds a horizontal scroll so the table doesn't break your layout.*/
+        white-space: nowrap;
+    }
+}
+ 
+form{
+    width: 100%;
+    max-width: 400px; /*Keeps the form from getting too wide*/
+}
+.pay-button{
+    background-color: #000080; /*Navy/Dark Blue*/
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+.pay-button:hover{
+    background-color: #000055;
+}
+fieldset{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.room-type{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* Style the Price Section( Radio Buttons)*/
+/*This adds space above the Price section*/
+form br + br{
+    content: "";
+    display: block;
+    margin-top: 10px;
+}
+/*Make the radio buttons easy to click and align.*/
+input[type="radio"]{
+    margin-right: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transform: scale(1.1); /*Makes the circles slightly larger*/
+}
+/*Align the text Labels for the radio buttons*/
+label{
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+/*Style the Name Input field to match the dropdown*/
+.name-field{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /*Ensures padding doesn't push it out of the box*/
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* --- MOBILE OPTIMIZATION ---*/
+@media screen and (max-width:768px){
+    /*1. Make the Container fill the width */
+    .accomodation-section{
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* 2. The Table Transformation */
+    .room-table{
+        display: block; /*Allows the Table to behave like a normal container */ 
+        width: 100%;
+    }
+    /*Hide the original header - it takes up too much room on mobile*/
+    .room-table thead{
+        display: none;
+    }
+    /*Force each row to become it's own "card" */
+    .room-table tr{
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    /* Make each full width */
+    .room-table td{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border: none;
+        padding: 8px 0;
+    }
+    /* Make the Images big and Beatiful on mobile */
+    .room-image img{
+        width: 100% !important;
+        height: auto !important;
+        max-width: 400px;
+        border-radius: 5px;
+    }
+    .price{
+        font-size: 1.4rem;
+        color: #b12704;
+    }
+}
