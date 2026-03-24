@@ -8,7 +8,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 5%px;
 }
 /* LOGO + TITLE */
 .logo-area{
@@ -27,6 +27,8 @@ nav{
 /*NAV MENU*/
 nav ul{
     margin: 0;
+    list-style: none;
+    gap: 20px;
     padding: 0;
     list-style: none;
 }
@@ -311,6 +313,16 @@ label{
 }
 /* --- MOBILE OPTIMIZATION ---*/
 @media screen and (max-width:768px){
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
     /*1. Make the Container fill the width */
     .accomodation-section{
         width: 100%;
@@ -354,5 +366,24 @@ label{
     .price{
         font-size: 1.4rem;
         color: #b12704;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row-reverse; /*This Flips the order from right to left*/
+        justify-content: space-around; /*Spreads them out evenly*/
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        overflow-x: auto; /*If they are still too wide, this lets you swipe them side-to-side */
+        white-space: nowrap; /*Prevents the words from jumping to a new line */
+    }
+    nav ul li{
+        padding: 0 10px; /*Gives each link a litle breathing room*/
+    }
+    nav ul li a {
+        font-size: 13px; /*Shrinking the text slightly so it fits on a phone screen */
+        text-decoration: none;
+        color: white; /*Or Whatever color your links are */
     }
 }
